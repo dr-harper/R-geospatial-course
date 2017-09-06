@@ -10,7 +10,7 @@ This presentation was prepared as part of a one-week R course. It assumes a basi
 
 Link to Presentation: [click here](Presentation/SpatialDataLecture.pdf)
 
-![](TitleSlide.png)
+![](https://github.com/mikey-harper/R-geospatial-course/blob/master/TitleSlide.PNG?raw=true)
 
 ## Datasets
 
