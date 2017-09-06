@@ -1,0 +1,38 @@
+\def\begincols{\begin{columns}}
+\def\begincol{\begin{column}}
+\def\endcol{\end{column}}
+\def\endcols{\end{columns}}
+
+% Style Blocks
+\definecolor{BlueTOL}{HTML}{222255}
+\definecolor{BrownTOL}{HTML}{666633}
+\definecolor{GreenTOL}{HTML}{225522}
+\definecolor{shadecolor}{RGB}{255,255,255}
+\setbeamercolor{alerted text}{fg=BrownTOL}
+\setbeamercolor{example text}{fg=GreenTOL}
+
+\setbeamercolor{block title alerted}{use=alerted text,
+    fg=alerted text.fg,
+    bg=alerted text.bg!80!alerted text.fg}
+\setbeamercolor{block body alerted}{use={block title alerted, alerted text},
+    fg=alerted text.fg,
+    bg=block title alerted.bg!50!alerted text.bg}
+\setbeamercolor{block title example}{use=example text,
+    fg=example text.fg,
+    bg=example text.bg!80!example text.fg}
+\setbeamercolor{block body example}{use={block title example, example text},
+    fg=example text.fg,
+    bg=block title example.bg!50!example text.bg}
+    
+% Custom Content
+\setbeamertemplate{frame footer}{Geospatial Data with R}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[page number]
+
+\setbeamercolor{block title}{use=structure,fg=black,bg=BlueTOL}
+\setbeamercolor{block body}{use=structure,fg=white,bg=white!20!white}
+
+% change the font size of verbatim text
+\makeatletter
+\def\verbatim{\small\@verbatim \frenchspacing\@vobeyspaces \@xverbatim}
+\makeatother
