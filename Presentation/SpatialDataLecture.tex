@@ -274,7 +274,7 @@ Well, it depends on the task!
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.9\linewidth]{../images/bike_ggplot} 
+{\centering \includegraphics[width=0.75\linewidth]{../images/bike_ggplot} 
 
 }
 
@@ -517,10 +517,10 @@ Scratch}
 \end{Shaded}
 
 \begin{verbatim}
-##            [,1]      [,2]
-## [1,] 0.03463934 0.6675732
-## [2,] 0.15650207 0.1940877
-## [3,] 0.44065106 0.1272320
+##           [,1]      [,2]
+## [1,] 0.3624658 0.1637974
+## [2,] 0.6252937 0.6651115
+## [3,] 0.8885394 0.8519063
 \end{verbatim}
 
 \begin{itemize}
@@ -732,20 +732,6 @@ SpatialDataFrames}\label{part-ii-working-with-spatialdataframes}
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\KeywordTok{nrow}\NormalTok{(cities@data)}
-\end{Highlighting}
-\end{Shaded}
-
-\begin{verbatim}
-## [1] 916
-\end{verbatim}
-
-\endcol
-\begincol{.48\textwidth}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{# show the column names}
 \KeywordTok{names}\NormalTok{(cities@data)}
 \end{Highlighting}
 \end{Shaded}
@@ -753,6 +739,9 @@ SpatialDataFrames}\label{part-ii-working-with-spatialdataframes}
 \begin{verbatim}
 ## [1] "name"        "country.etc" "pop"         "capital"
 \end{verbatim}
+
+\endcol
+\begincol{.48\textwidth}
 
 \endcol
 \endcols
@@ -1131,8 +1120,6 @@ An online registry of spatial projections is available at \url{http://www.epsg-r
 
 \begin{frame}{Coordinate Systems: Example}
 
-\begin{center}\includegraphics[width=0.75\linewidth]{SpatialDataLecture_files/figure-beamer/unnamed-chunk-30-1} \end{center}
-
 \end{frame}
 
 \begin{frame}[fragile]{Example: Reprojecting}
@@ -1153,11 +1140,11 @@ An online registry of spatial projections is available at \url{http://www.epsg-r
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.8\linewidth]{SpatialDataLecture_files/figure-beamer/unnamed-chunk-32-1} 
+{\centering \includegraphics[width=0.8\linewidth]{SpatialDataLecture_files/figure-beamer/unnamed-chunk-31-1} 
 
 }
 
-\caption{Comparison of coordinate systems}\label{fig:unnamed-chunk-32}
+\caption{Comparison of coordinate systems}\label{fig:unnamed-chunk-31}
 \end{figure}
 
 \end{frame}
@@ -1249,7 +1236,7 @@ Union, distance, intersection, convex hull, envelope, buffer, simplify, polygon 
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics[width=0.8\linewidth]{SpatialDataLecture_files/figure-beamer/unnamed-chunk-35-1} \end{center}
+\begin{center}\includegraphics[width=0.9\linewidth]{SpatialDataLecture_files/figure-beamer/unnamed-chunk-34-1} \end{center}
 
 \end{frame}
 
@@ -1346,7 +1333,7 @@ Union, distance, intersection, convex hull, envelope, buffer, simplify, polygon 
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.6\linewidth]{SpatialDataLecture_files/figure-beamer/get_rasterdir_pictures-1} 
+{\centering \includegraphics[width=0.45\linewidth]{SpatialDataLecture_files/figure-beamer/get_rasterdir_pictures-1} 
 
 }
 
@@ -1393,7 +1380,7 @@ Union, distance, intersection, convex hull, envelope, buffer, simplify, polygon 
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics[width=0.5\linewidth]{SpatialDataLecture_files/figure-beamer/extract_vals_at_pts01-1} \end{center}
+\begin{center}\includegraphics[width=0.45\linewidth]{SpatialDataLecture_files/figure-beamer/extract_vals_at_pts01-1} \end{center}
 
 \end{frame}
 
@@ -1438,7 +1425,7 @@ Union, distance, intersection, convex hull, envelope, buffer, simplify, polygon 
 \end{Highlighting}
 \end{Shaded}
 
-\begin{center}\includegraphics[width=1\linewidth]{SpatialDataLecture_files/figure-beamer/unnamed-chunk-38-1} \end{center}
+\begin{center}\includegraphics[width=1\linewidth]{SpatialDataLecture_files/figure-beamer/unnamed-chunk-37-1} \end{center}
 
 \end{frame}
 
@@ -1478,13 +1465,7 @@ Don't worry if you don't understand all the examples. They can be used for futur
 
 \begin{frame}{ggplot Example: A World Map}
 
-\begin{itemize}
-\tightlist
-\item
-  Places I have visited.
-\end{itemize}
-
-\begin{center}\includegraphics[width=1\linewidth]{SpatialDataLecture_files/figure-beamer/unnamed-chunk-40-1} \end{center}
+\begin{center}\includegraphics[width=1\linewidth]{SpatialDataLecture_files/figure-beamer/unnamed-chunk-39-1} \end{center}
 
 \end{frame}
 
@@ -1537,13 +1518,13 @@ Don't worry if you don't understand all the examples. They can be used for futur
 Another example from:
 \url{http://docs.ggplot2.org/current/geom_map.html}
 
-\begin{center}\includegraphics[width=1\linewidth]{SpatialDataLecture_files/figure-beamer/unnamed-chunk-42-1} \end{center}
+\begin{center}\includegraphics[width=1\linewidth]{SpatialDataLecture_files/figure-beamer/unnamed-chunk-41-1} \end{center}
 
 \end{frame}
 
 \begin{frame}{ggplot Examples: a faceted map}
 
-\begin{center}\includegraphics[width=1\linewidth]{SpatialDataLecture_files/figure-beamer/unnamed-chunk-43-1} \end{center}
+\begin{center}\includegraphics[width=1\linewidth]{SpatialDataLecture_files/figure-beamer/unnamed-chunk-42-1} \end{center}
 
 \end{frame}
 
@@ -1592,7 +1573,7 @@ Another example from:
 
 \begin{frame}{ggplot Examples: spatial Points}
 
-\begin{center}\includegraphics[width=0.8\linewidth]{SpatialDataLecture_files/figure-beamer/unnamed-chunk-45-1} \end{center}
+\begin{center}\includegraphics[width=0.8\linewidth]{SpatialDataLecture_files/figure-beamer/unnamed-chunk-44-1} \end{center}
 
 \end{frame}
 

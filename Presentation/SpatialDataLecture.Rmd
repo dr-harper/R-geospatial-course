@@ -99,7 +99,7 @@ Well, it depends on the task!
 
 ## R Examples (1)
 
-```{r, out.width="90%", fig.cap="London Cycle Hire Journeys"}
+```{r, out.width="75%", fig.cap="London Cycle Hire Journeys"}
 knitr::include_graphics("../images/bike_ggplot.png")
 ```
 
@@ -342,14 +342,15 @@ plot(scotland, axes=T, asp=1, col=palette())
 \begincol{.48\textwidth}
 
 ```{r, echo = TRUE}
-nrow(cities@data)
+names(cities@data) 
+
 ```
 
 \endcol
 \begincol{.48\textwidth}
 
 ```{r, echo = TRUE}
-names(cities@data) 
+
 ```
 
 \endcol
@@ -530,18 +531,19 @@ crs(canada)
 crs(BigCities) <- CRS("+init=epsg:4326")
 ```
 
-```{r, echo = FALSE, out.width="75%"}
+```{r PlotCanada, echo = FALSE, out.width="75%", eval=FALSE}
 # Plot the map and the cities together
 plot(canada, col="grey90", axes=T, 
      main = "Location of Canadian Cities with population greater than 10000")
 plot(BigCities, add=TRUE)
+
 ```
 
 ## Example: Reprojecting
  
 - The function `spTransform()` can be used to reproject a CRS
 
-```{r, echo = TRUE}
+```{r, echo = TRUE, fig.asp="70%"}
 GB <- raster::getData("GADM", country="GBR", level = 1, path = "../data")
 GB_BNG <- spTransform(GB, CRS("+init=epsg:27700"))
 ```
@@ -609,7 +611,7 @@ plot(BigCities, col="red", pch=16, cex=2, add=TRUE)
 - How far is it to the nearest city?
 - \alert{spatstat} provides adds a spatial proximity functions.
 
-```{r, echo=TRUE, message=FALSE, warning=FALSE, fig.height=4}
+```{r, echo=TRUE, message=FALSE, warning=FALSE, out.width = "90%"}
 library(spatstat)
 BigCities$Distance <- nndist(X = BigCities@coords)
 spplot(BigCities, "Distance") # Plot Results
@@ -660,7 +662,7 @@ plot(myrastSquared, main = "Raster Value Squared", asp=1)
 
 - The `raster()` function from the \alert{raster} package can be used
 
-```{r get_rasterdir_pictures, echo=TRUE, fig.cap="UK Annualised Wind Speed Map at 45m above ground level", fig.asp=1, out.width="60%"}
+```{r get_rasterdir_pictures, echo=TRUE, fig.cap="UK Annualised Wind Speed Map at 45m above ground level", fig.asp=1, out.width="45%"}
 WindSpeedRaster <- raster(x = "../data/WindSpeed45.tif")
 plot(WindSpeedRaster, "WindSpeed45")
 ```
@@ -685,7 +687,7 @@ SolentPoints <- spsample(Solent, n = 25, type= "random")
 SolentPoints$ID <- 1:nrow(SolentPoints@coords)
 ```
 
-```{r extract_vals_at_pts01, fig.asp=1, out.width="50%", fig.height=4}
+```{r extract_vals_at_pts01, fig.asp=1, out.width="45%", fig.height=4}
 plot(WindSpeedSolent)
 plot(SolentPoints, pch=16, col="red", cex=2, add =TRUE)
 text(SolentPoints, labels = SolentPoints$ID, cex= 0.7, pos=3)
@@ -709,7 +711,7 @@ SolentPointsRast <- rasterize(SolentPoints, WindSpeedSolent, field=1)
 dist2SamplePtsRast <- distance(SolentPointsRast)
 ```
 
-```{r, fig.align="center", out.width="100%", fig.width=6, fig.height=2}
+```{r, fig.align="center", out.width="100%", fig.width=5.7, fig.height=2}
 par(mfrow=c(1,3)) # Plot graphs side by side
 
 plot(SolentPoints, col="red", pch=16, main = "Original Points")
@@ -718,6 +720,7 @@ plot(SolentPointsRast, main = "Rasterized Points", legend=FALSE, col = "black")
 
 plot(dist2SamplePtsRast, main = "Proximity Raster")
 plot(SolentPoints, col="red", pch=16, add=TRUE)
+
 
 
 ```
@@ -751,8 +754,6 @@ Don't worry if you don't understand all the examples. They can be used for futur
 
 
 ## ggplot Example: A World Map
-
-- Places I have visited.
 
 ```{r, message=FALSE, warning=FALSE, out.width="100%"}
 library(mapdata)
